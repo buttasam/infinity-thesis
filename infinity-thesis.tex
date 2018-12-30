@@ -1,0 +1,200 @@
+\documentclass[czech]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+
+\begin{document}
+
+\title{Problém potenciálního a~aktuálního nekonečna}
+\author{Samuel Butta}
+
+\begin{titlepage}
+\centering
+{\scshape\LARGE České vysoké učení technické v~Praze \par}
+{\scshape\Large Fakulta Informačních technologií \par}
+{\scshape\Large Obor Softwarové inženýrství \par}
+\vspace{1cm}
+{\scshape\Large Historie informatiky a~matematiky 2\par} 
+
+\vspace{1.5cm}
+{\huge\bfseries Problém potenciálního a~aktuálního nekonečna\par}
+\vspace{2cm}
+{\Large\itshape Bc. Samuel Butta\par}
+{\normalsize\itshape 2. ročník - magisterský program\par}
+\end{titlepage}
+
+\section*{Filozofie matematiky}
+
+Matematika je disciplína, která se zabývá abstraktními entitami a~vztahy mezi nimi. Překlad řeckého slova \textit{mathematikós}, který znamená \textit{milující poznání}, snad dokáže lépe přiblížit původní význam, protože chápání slov se v~průběhu času mění a~slova získávají různé konotace. Matematika umožňuje poznávat a~modelovat svět na všech úrovních lidského vědění. Zdá se, že se jedná o~jakýsi metajazyk vesmíru, který je zdánlivě všudypřítomný a~všemohoucí. To jsou vlastnosti, které se obvykle pojí s~božstvím. \cite{livio}
+
+V současnosti je matematika vyučována velice technicky a~je opomíjen fascinující historický vývoj, který byl veden nejhlubšími filozofickými úvahami o~světě. Filozofické otázky o~povaze matematiky fascinují lidi od nepaměti. 
+
+Podstata matematiky je zahalená neskutečným tajemstvím a~krásou. Základní nezodpovězenou otázkou je, zda lidé matematiku vytváří nebo zda ji objevují.
+Dnes existují dva směry, které na tuto otázku odpovídají. Jedná se o~takzvaný \textit{platonismus} a~\textit{formalismus}. Podle Platóna existuje svět ideí, ve~kterém se nachází matematické objekty a zákonitosti nezávislé na našem vnímání a~fyzickém světě.
+Platonisté tedy věří, že je matematika objevována. Naopak formalisté tvrdí, že se jedná o~výtvor člověka. Tento směr získával na váze především ve 20. století, kdy došlo k~rozvoji formální matematické logiky.
+
+Fyzik Roger Penrose na dělení světa na svět ideí, vnímání a~fyzický svět trefně poznamenal:
+\uv{Není pochyb,
+že ve skutečnosti neexistují tři světy, ale jen jeden, jehož pravou povahu ovšem v~současnosti
+nedokážeme ani zahlédnout.}\cite{livio}
+Jedním z~bodů, ve~kterém se matematika s~filozofií spojuje, jsou úvahy o~nekonečnu.
+
+
+\section*{Dva druhy nekonečna}
+
+Potřebu rozlišit více druhů nekonečna měli nezávisle na sobě lidi v~různých částech světa již ve starověku.
+Z filozofického pohledu se rozlišují dva typy nekonečna. 
+
+\textit{Nekonečno potenciální}, které je blízké lidské intuici. Lze si ho představit jako horizont, který lze neustále posouvat, nebo jako proceduru, která se přibližuje nekonečnému konci, ale nikdy ho nedosáhne. Například sekvence přirozených čísel, které můžu vždy o~jedno číslo zvětšit.
+
+\textit{Aktuální nekonečno} je výrazně složitější koncept na představivost, přestože se s~ním člověk pracuje běžně, aniž by si to uvědomoval. Jedná se například o~množinu přirozených čísel. V~podstatě jde o~to, že se nekonečná množina uchopí jako jeden celek a~ohraničí se. Omezené nekonečno zní jako oxymorón a~mnozí velikáni ho, právě pro tento na první pohled zřejmý rozpor, odmítali.
+
+\section*{Nekonečno v~průběhu dějin}
+
+\subsection*{Starověk}
+Úvahy o~nekonečnu jsou určitě spojeny s~rozvojem schopnosti abstraktního uvažování, která je pro člověka unikátní. První historická zmínka o~nekonečnu pochází z~antického presokratovského Řecka od \textbf{Anaximandera z~Milétu}, který použil slovo \textit{aperion}, což lze přeložit jako \textit{"bez hranic"}. \cite{wallace}
+Mnohem známější je však \textbf{Zenón z~Eleje} a~to především popisem paradoxů spojených s~nekonečnem, jako jsou například Achilleus a~želva, nebo paradox o~pohybu letícího šípu. Tyto paradoxy se týkají nekonečně malých veličin s~kterými Řekové neuměli z~dnešního pohledu správně pracovat.
+
+\textbf{Aristotelés}, jehož vliv byl snad největší na celou pozdější Evropu, ve svém spise Fyzika striktně odmítl koncept aktuálního nekonečna. \cite{aristoteles_fyzika} To mělo samozřejmě velký vliv na pozdější úvahy o~nekonečnu.
+
+Všemohoucnost, vševědoucnost a~nekonečno byly a~jsou ústřední termíny křesťanské nauky.
+Již ve starém zákoně jsou takto označovány boží vlastnosti. 
+Bůh je přímo označován jako všemohoucí a~vševědoucí.
+
+\begin{center}
+\textit{Neříkej: „Zhřešil jsem, a~co se mi stalo?“; to jen proto, že Hospodin je nekonečně shovívavý.}
+
+\textit{\textbf{Sírachovec 5, 4 (Deuteronomium)}}
+\end{center}
+
+\begin{center}
+\textit{Nechte už těch povýšených řečí, urážka ať z~úst vám neunikne! Vždyť Hospodin je Bůh vševědoucí, neobstojí před ním lidské činy.}
+
+\textit{\textbf{1. Samuelova 2, 3}}
+\end{center}
+
+\begin{center}
+\textit{Ale od této chvíle bude Syn člověka sedět po pravici všemohoucího Boha.}
+
+\textit{\textbf{Lukáš 22, 69}}
+\end{center}
+
+\subsection*{Středověk}
+
+Křesťanští myslitelé se boží všemohoucností od počátků zabývali.
+Již \textbf{Svatý Augustýn} si kladl, pro úvahy o~aktuálním nekonečnu důležitou otázku, zda Bůh zná všechna přirozená čísla. Pokud je Bůh vševědoucí, pak je musí být schopný všechny pojmout neboli aktualizovat.
+
+Velký středověký učitel církve \textbf{Tomáš Akvinský}, který vnesl do teologie logiku a~racionální uvažování, v~podstatě Boží moc omezil. Jasně popsal, co Bůh vykonat nemůže. Odepřel Bohu jednání, které by vedlo ke sporu. Bůh podle Tomáše Akvinského například nemůže učinit, aby se něco, co se již v~minulosti stalo, zároveň nestalo.
+Aktuální nekonečno ovšem přisoudil pouze Bohu. Problém tím značně zjednodušil a~dal prostor prohledávání možností, které se vymykají lidským rozumovým poznávacím schopnostem. \cite{vopenka_infinitni_mateatika}
+
+\subsection*{Novověk}
+
+Velikán, který přenesl aktuální nekonečno do reálného světa, byl  \textbf{Giordano Bruno}.
+Tvrdil, že existuje nekonečně mnoho sluncí~jako je to naše a~nekonečně mnoho planet. Na tehdejší dobu se jednalo o~naprosto revoluční myšlenky, proto byl za své učení upálen katolickou církví. Paradoxní je, že jeho argumentace nijak nepopírala nebo neumenšovala Boha, naopak spočívala právě v~boží všemohoucnosti. Tvrdil, že všemohoucí Bůh by ze své podstaty nestvořil konečný počet sluncí. 
+
+Velcí filozofové jako byl \textbf{Benedikt Spinoza}, \textbf{René Descartes} nebo \textbf{Thomas Hobbes} aktuální nekonečno odmítali. \cite{vopenka_infinitni_mateatika}
+
+Praktické uplatnění nekonečna přišlo s~objevem infinitezimálního počtu. Slovo objev je zde příhodné, protože ho nezávisle na sobě přivedli v~17. století na svět \textbf{Isaac Newton} a~\textbf{Gottfried Wilhelm Leibniz}.
+Integrál, tedy součet nekonečně malých veličin, aktuálním nekonečnem značně zaváněl.
+
+Francouzský osvícenský filozof a~matematik \textbf{Jean le Rond d’Alembert} zavedl pojem limita, pomocí něhož jasně definoval pojmy jako derivace nebo integrál (tyto definice jsou stále platné) a zdánlivě očistil matematiku od aktuálního nekonečna a~nekonečně malých veličin.
+
+
+\section*{Nekonečno v~teorii množin}
+Moderní studium nekonečna je spojeno s~\textit{teorií množin}. Za praotce teorie množin lze považovat katolického kněze a~matematika \textbf{Bertranda Bolzana}, který působil v~18. století v~kostele svatého Salvátora u Karlova mostu.\cite{salvator} Byl to velice zbožný muž, který se i díky baroknímu přesahu zabýval především nekonečnými množinami. Jeho motivace byla tedy spíše teologická. 
+Bolzano podal teologický důkaz existence aktuálního nekonečna.
+
+Bolzano přišel s~pojmem \textit{pravda sama o~sobě}. Jedná se o~tvrzení, které je pravdivé za všech okolností a~nezávisle na člověku. V~dnešní terminologii by se mohlo použít označení tautologie. 
+Bolzano nejprve sporem ukázal, že existuje alespoň jedna pravda sama o~sobě. Vzal větu \uv{existuje alespoň jedna pravda sama o~sobě}~a řekl, že je pravdivá. Pravdivá by nebyla, pokud by žádná pravda o~sobě neexistovala. Tím by byl ale získán spor. 
+
+Dále dokázal, že existuje nekonečně mnoho takovýchto pravd. Například věta \uv{existuje alespoň jedna pravda sama o~sobě, že existuje alespoň jedna pravda o~sobě}, je také pravda sama o~sobě, ovšem jiná než původní. Takové to zřetězování je možné donekonečna. Vyvrcholení důkazu je ovšem čistě teologické. Protože přece Bůh zná všechny pravdy, musí být tato množina aktualizovatelná.\cite{vopenka}
+
+Tento důkaz dnešnímu čtenáři seznámenému s~moderní matematikou může znít poněkud směšně. Zajímavé je uvědomění si, že aktuální nekonečno dnes považujeme za samozřejmost, ale jiný důkaz než teologický není.
+
+Bolzanovu knihu \textit{Paradoxy nekonečna} náhodou objevil \textbf{Georg Cantor}, otec klasické teorie množin. Knihou byl fascinován a~čerpal z~ní inspiraci pro svoji práci.
+
+Cantor se zabýval především nekonečnými množinami, zavedl pojem \textit{mohutnost}, pomocí něho nekonečné množiny porovnával. Rozšířil čísla o~takzvaná \textit{ordinální} a~\textit{kardinální} čísla, která se liší a~nabývají významu až při práci s~nekonečnými množinami. Jeho práce byla tak radikální, že v~počátcích nebyla matematickou obcí respektována a~přijímána. Tento vzorec je patrný u mnohých geniálních velikánů, kteří ve své době nebyli pochopeni. Zbožný Cantor hledal tedy oporu jinde a~našel ji v~teologii. On sám věřil, že mu pravdy o~nekonečných množinách zjevil Bůh. Přestože vymyslel a~dokázal velice významné věty, vágní definice množiny se později ukázala jako problém.
+Cantor předpokládal množinu jako soubor objektů splňující nějakou vlastnost. Tato představa je lidské intuici vlastní, při bližším zkoumání ovšem vede k~paradoxům.
+
+Snad nejznámějším paradoxem je Russelův paradox, se~kterým přišel významný anglický matematik, logik a~filozof \textbf{Bertrand Russel}.\cite{russell_paradox} Znění paradoxu je následující:
+
+\begin{flushleft}
+\textit{Označme jako S~množinu všech množin, které nejsou svým vlastním prvkem (tj. množin, které neobsahují samy sebe). Zapsanou jako {\displaystyle S=\{X|X\notin X\}}}.
+
+\textit{Tato množina je v~Cantorově systému dobře definovaná, tzn. nyní by mělo být pro libovolnou množinu M možno rozhodnout, zda tato množina M je, či není prvkem množiny S. Toto však nelze rozhodnout v~případě samotné množiny S. Obě možnosti totiž vedou ke sporu s~její definicí. (Pokud s~není svým vlastním prvkem, měla by podle definice do s~patřit; pokud však s~je svým vlastním prvkem, pak by podle definice do s~patřit neměla.)}
+
+\end{flushleft}
+
+
+Takto definovanou množinu si lze těžko představit, proto se pro lepší pochopení často používá paradox holiče, který zní:
+
+\begin{flushleft}
+\textit{Holič ze Sevilly holí právě ty ze sevillských mužů, kteří se neholí sami. Pokusíme-li se odpovědět na otázku, zda holič holí sám sebe, dostaneme se do~bludného kruhu. Pokud se sám neholí, tak se musí holit, protože holí ty, co se sami neholí. A~naopak holí-li se sám, tak se holit nemůže, protože holí jen ty, kteří se sami neholí.}
+\end{flushleft}
+
+Takovéto paradoxy vedly k~jasnému definování pojmu množina pomocí axiomatických teorií.
+
+Konec 19. a~počátek 20. století bylo také období, kdy se velmi rozvíjela formální logika. K~tomuto období patří velikáni jako \textbf{Gottlob Frege} nebo \textbf{David Hilbert}. Logikové pátrali po původu matematiky a~snažili se veškerou matematiku vystavit na logice. Tato snaha je známá jako Hilbertův Program.\cite{hilbert_program} Pokládali si například základní otázky ohledně aritmetiky. Nejznámější teorií aritmetiky je Peanova aritmetika, pojmenovaná po Italském matematikovi \textbf{Giuseppe Peanovi}.\cite{peano}
+Tato logická teorie je postavená na několika axiomech. Klíčová je funkce následníka (zde označena písmenem \textit{S}). V~kontextu nekonečna je nedůležitější axiom, který říká, že ke každému prvku existuje následník:
+
+\[
+(\forall x) (\exists y ) S(x) = y
+\]
+
+Tento axiom přesně ukazuje, co znamená potenciální nekonečno. Jinou teorií, která dnes tvoří základ moderní matematiky, je teorie množin. Nejčastěji užívanou teorií množin je takzvaná ZF, případně ZFC axiomatícká teorie množin. Teorie je pojmenována po německých matematicích \textbf{Ernstu Zermelovi} a~\textbf{Abrahamu Fraenkelovi}, kteří s~ní přišli na začátku 20. století. Jedním z~axiomů je \textit{axiom nekonečna}, který zaručuje existenci nekonečné množiny.
+
+\[
+(\exists a)(\emptyset \in a~\land (\forall x)(x \in a~\Longrightarrow x \cup \{ x \} \in a))
+\]
+
+Přijetí tohoto axiomu znamená přijetí aktuálního nekonečna.
+Celá moderní matematika je tedy založená na víře v~aktuální nekonečno.
+Pokud někdo řekne, že číslo tři náleží množině přirozených čísel, nebo že číslo $\pi$ je z~množiny reálných čísel, což jsou tvrzení, se kterými se setkává v~životě téměř každý člověk, vlastně to znamená implicitní přijetí aktuálního nekonečna. Důkaz jeho existence je v~podstatě teologický.
+Profesor Vopěnka píše, že jsme si přisvojili schopnost barokního Boha a~začali ji brát jako samozřejmou.\cite{vopenka}
+
+\subsection*{Důsledky přijetí aktuálního nekonečna}
+
+Fascinujícím důsledkem je kombinace axiomu potence a~Cantorovy věty. Axiom potence říká, že ke každé množině (tedy i nekonečné) existuje její potenční množina, to je množina všech jejích podmnožin.
+
+Cantorova věta, kterou také dokázal, zase říká, že mohutnost potenční množiny je ostře větší než mohutnost původní množiny. Důsledkem je, že existuje nekonečně mnoho nekonečen s~různou mohutností.
+Toto je právě oblast, kterou se Cantor nevíce zabýval a~byl jí hluboce fascinován.
+
+Takovýto závěr není jistě intuitivní a~člověku se jeví jako nesmyslný. Je to~tedy důvod pro odmítnutí celé moderní matematiky a~aktuálního nekonečna? 
+
+Velice zajímavým důsledkem přijetí aktuálního nekonečna je důkaz takzvané \textit{Goodsteinovy věty}. Jedná se o~větu z~oblasti aritmetiky, která je dokazatelnou pouze v~axiomatické teorii množin, tedy s~přijetím aktuálního nekonečna, zatímco v~Peanově aritmetice dokazatelná není. \cite{goodstein}
+
+\section*{Závěr}
+
+Úvahy o~nekonečnu fascinují lidstvo od nepaměti. Hnacím motorem pro nové myšlenky v~matematice byly dost často filozofické a teologické otázky. To, co je v dnešní době považováno za samozřejmé, se při hlubším studiu už tak samozřejmé nejeví. V~běžném životě je práce s nekonečnými množinami celkem rutinní záležitost, která s sebou přináší přisvojení si schopností, které byly přisuzovány pouze Bohům. Je naprosto fascinující, kam se konečný lidský mozek dostal v přemítání o nekonečnu.
+
+
+\newpage
+
+\begin{thebibliography}{}
+
+\bibitem{livio}
+    LIVIO, Mario. Je Bůh matematik?. Praha: Argo, 2010. Zip (Argo: Dokořán). ISBN 978-80-7363-282-3.
+\bibitem{aristoteles_fyzika}
+    ARISTOTELÉS. Fyzika. Praha: P. Rezek, 1996. ISBN 80-86027-03-1.
+\bibitem{wallace}
+    Wallace, David Foster (2004), Everything and More: a~Compact History of Infinity, Norton, W. W. and Company, Inc., ISBN 0-393-32629-2
+\bibitem{vopenka}
+    VOPĚNKA, Petr. Podivuhodný květ českého baroka: první přednášky o~teorii množin. Vyd. v~Karolinu 2. Praha: Karolinum, 2012. ISBN 978-80-246-2123-4
+\bibitem{vopenka_infinitni_mateatika}
+    VOPĚNKA, Petr. Nová infinitní matematika. Praha: Univerzita Karlova v~Praze, nakladatelství Karolinum, 2015. ISBN 9788024629872.    
+\bibitem{russell_paradox}    
+    LINK, Godehard. One hundred years of Russell's paradox: mathematics, logic, philosophy. New York: Walter de Gruyter, c2004. ISBN~9783110174380.   
+\bibitem{peano}
+    Gillies, Douglas A., 1982. Frege, Dedekind, and Peano on the foundations of arithmetic. Assen, Netherlands: Van Gorcum.
+\bibitem{hilbert_program}    
+    R. Zach, 2006. Hilbert's Program Then and Now. Philosophy of Logic 5:411–447, arXiv:math/0508572 [math.LO].
+\bibitem{salvator}
+    http://www.farnostsalvator.cz/historie-farnosti
+\bibitem{goodstein}
+    Caicedo, A. (2007), "Goodstein's function", Revista Colombiana de Matemáticas, 41 (2): 381–391.
+
+\end{thebibliography}
+
+\end{document}
